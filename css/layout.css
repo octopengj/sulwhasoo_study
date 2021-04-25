@@ -1,1 +1,225 @@
 @charset "utf-8";
+#main {
+    background-color: #ccc;
+    z-index: 0;
+    position: relative;
+    width:100vw;
+    height:calc(100vh - 108px);
+}
+.header {
+    position: relative;
+    background:#fff;
+    z-index:2;
+}
+.header_wrap {
+    height:78px;
+    max-width:1100px;
+    /* border:1px solid #f00; */
+    margin:auto;
+    display:flex;
+    justify-content: space-between;
+    padding:0 7%;
+    position:relative;
+}
+.select_language{
+    position:relative;
+    padding-top:16px;
+    font-size:1.1em;
+    letter-spacing:.05em;
+    width:25%;
+    text-align:left;
+}
+.select_language .t_lang i{
+    position:absolute;
+    left:80px;
+    top:16px;
+}
+.select_language .t_lang i.icon-angle-up{
+    opacity:0;
+}
+.select_language.show .select_lang_list{
+    visibility: visible;
+}
+.select_language.show .t_lang i.icon-angle-up{
+    opacity:1;
+}
+.select_language.show .t_lang i.icon-angle-down{
+    opacity:0;
+}
+.select_lang_list{
+    position:absolute;
+    top:36px;
+    left:0;
+    padding:12px 0;
+    border:1px solid #191919;
+    background:#fff;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, .3);
+    z-index:3;
+    visibility: hidden;
+}
+.select_lang_list a{
+    display:block;
+    padding:6px 21px 4px 18px;
+    text-transform: uppercase;
+}
+.select_lang_list li:nth-child(1) a{
+    background-color:#eee;
+}
+.select_lang_list a:focus,
+.select_lang_list a:hover{
+    color:#000;
+    background:#eee;
+}
+
+h1.logo{
+    align-self: center;
+}
+h1.logo img{
+    width:166px;
+}
+.header_link{
+    width:25%;
+    padding-top:16px;
+    text-align: right;
+}
+.header_link > a{
+    display:inline-block;
+    margin:0 .2em;
+    padding:1px 8px 0 10px;
+    font-size:11px;
+    position: relative;
+}
+.header_link > a:after{
+    display:block;
+    content:"";
+    position: absolute;
+    top:1px;
+    right:-4px;
+    width:1px;
+    height:12px;
+    background:#eee;
+}
+.header_link > a.h_open_search:after{
+    display:none;
+}
+.search-container{
+    position: absolute;
+    top:calc(50% - 20px);
+    right:100px;
+    /* margin-top:-20px; */
+    padding-bottom:5px;
+    /* width:308px; */
+    width:0;
+    opacity:0;
+    visibility: hidden;
+    transition:width 1s,opacity 0.1s;
+
+}
+.search-container.show{
+    width:308px;
+    opacity:1;
+    visibility: visible;
+}
+
+.search_wrap{
+    border:1px solid #ccc
+}
+
+.search_wrap input.text{
+    border:none;
+    height: 48px;
+    padding:8px 12px;
+    font-size:16px;
+    outline: none;
+    width: 100%;
+}
+.search_wrap .submit{
+    position: absolute;
+    top:-4px;
+    right:-17px;
+    font-size:24px;
+    color:#aaa;
+    /* color:transparent; */
+}
+.sch_close{
+    position:absolute;
+    top:0;
+    right:-60px;
+}
+.gnb {
+    background-color:#fff;
+    height:30px;
+    /* border:1px solid #000; */
+}
+.gnb .header_wrap{
+    height:100%;
+}
+.gnb_menu{
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom:1px solid transparent;
+    
+}
+.gnb:after{
+    content:"";
+    position: absolute;
+    left:0;
+    right:0;
+    top:108px;
+    z-index: 0;
+    height:0px;
+    background-color: #fff;
+    transition:all 0.3s ease-in-out;
+    opacity:0;
+}
+.gnb.Active:after{
+    opacity:1;
+    height:30px;
+}
+.gnb.Active .gnb_menu{
+    border-bottom:1px solid #000;
+}
+.nav_d1_a{
+    display:block;
+    padding:5px 20px 10px;
+    font-size:15px;
+    /* transition:all 0.3s; */
+}
+.nav_d1_a:hover{
+    color:#000;
+    font-weight:500
+}
+.gnb_menu>li>ul{
+    /* display:none; */
+    z-index: 1;
+    position:absolute;
+    width:100%;
+    opacity:0;
+    height:30px;
+    left:0;
+    transition:opacity 0.2s;
+    
+}
+.gnb_menu>li>ul.over{ 
+    /* display:block; */
+    opacity:1;
+    z-index: 5;
+}
+
+.gnb_menu>li>ul>li{
+    display:flex;
+    height:100%;
+    align-items: center;
+    justify-content: center;
+}
+.gnb_menu>li>ul>li>a{
+    display:block;
+    padding: 5px 20px 10px;
+    font-size: 15px;
+}
+.gnb_menu>li>ul>li>a:hover{
+    color:#000;
+}

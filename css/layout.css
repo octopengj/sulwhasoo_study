@@ -466,3 +466,50 @@ h2.cont_title{
   line-height: 38px;
   text-align: center;
 }
+
+/* lounge */
+.lounge{
+    margin-top:70px;
+    padding:0 90px;
+    height:590px;
+}
+.lounge_cont{
+    display:flex;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.lounge_txt_wrap{
+    width:calc(100% - 650px);
+}
+.lounge_txt_wrap h3{
+    border-bottom: 1px solid #c3bdb6;
+    color: #6a481b;
+    font-size: 1.875vw;
+    font-family: 'Buri',serif; 
+}
+.lounge_txt_wrap .sub_tit{
+    margin: 40px 0 0;
+    color: #000;
+    font-size: 46px;
+    line-height: 65px;
+    font-family: 'Buri',serif;
+}
+.lounge_txt_wrap .desc{
+    margin: 16px 0 54px;
+    color: #333;
+    font-size: 20px;
+    line-height: 32px;
+}
+.btn_view{
+    display:inline-block;
+    height:38px;
+    padding:0 44px;
+    border:1px solid #555;
+    font-size: 15px;
+    color:#555;
+    line-height: 38px;
+}
+.lounge.lou02 .lounge_img{
+    order:2;
+}

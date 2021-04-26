@@ -340,5 +340,61 @@
   })
   ```
 
+### recommend2
+
+- html
+
+  lounge lou01과 lou02로 구분해서 작성
+
+  ```html
+  <div class="lounge lou01">
+    <div class="lounge_cont">
+      <div class="lounge_img">
+        <a href="#">
+          <img src="img/lou_01.jpg" alt="liu01">
+        </a>
+     </div>
+      <div class="lounge_txt_wrap">
+        <h3>SHADE picker</h3>
+        <p class="sub_tit">
+          나에게 맞는 컬러가 <br>
+          궁금하다면?
+        </p>
+        <p class="desc">
+          사용 중인 페이스 메이크업 제품 정보를 통 <br>
+          같은 컬러의 설화수 제품을 찾아드립니다.
+        </p>
+        <div class="btn_wrap">
+          <a href="#" class="btn_view">자세히보기</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="lounge lou02">
+      
+  </div>
+  ```
+
+- css
+
+  flex 배치
+
+  ```css
+  .lounge_cont{
+      display:flex;
+      height: 100%;
+      justify-content: space-between;
+      align-items: center;
+  }
+  ```
+
+  lou2를 order:2;로 순서 변경
+
+  ```css
+  .lounge.lou02 .lounge_img{
+      order:2;
+  }
+  ```
+
   
 

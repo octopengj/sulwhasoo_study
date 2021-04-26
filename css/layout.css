@@ -317,6 +317,7 @@ h1.logo img{
     font-size: 15px;
     line-height: 35px;
     text-align: center;
+    padding: 0;
 }
 .visu_arrow{
     position:absolute;
@@ -557,7 +558,7 @@ h2.cont_title{
     position:absolute;
     top:0;
     height:100%;
-    left:730px;
+    left:720px;
     width:364px;
     display:flex;
     align-items: center;
@@ -604,4 +605,61 @@ h2.cont_title{
 .flagside.right{
     right:0;
     background-image:url(/img/flag-arr-next.png);
+}
+
+/* footer */
+.footer{
+    margin:80px 0 60px;
+    border-top:1px solid #eee;
+    font-size:1.1em;
+    letter-spacing: 0.03em;
+}
+.footer_wrap{
+    max-width:1100px;
+    margin:auto;
+    padding:0 7%;
+}
+.foot_link{
+    display:flex;
+    justify-content: space-between;
+    padding:15px 0 10px;
+    border-bottom:1px solid #eee;
+}
+.foot_item_wrap .footer_item{
+    display:inline-block;
+    margin-right:1.5em;
+    padding:3px 0;
+}
+.foot_item_wrap a.footer_item:hover{
+    color:#000;
+    text-decoration: underline;
+}
+.foot_item_wrap .footer_item + .footer_item::before{
+  content:'|';
+  color:#e5e5e5;
+  margin-right:1.5em;
+}
+.link_right{
+    display:flex;
+    align-items: center;
+}
+.link_right .link_item{
+ display:inline-block;
+ margin-right:.5em;
+ color:#b2b2b2;
+}
+.link_right .link_item img{
+    width:37px;
+}
+.link_right .link_item i{
+    color:#000;
+    font-size:14px;
+}
+.footer_legal{
+    padding-top:10px;
+}
+.legal_item {
+    padding: 0 8px;
+    color: #767676;
+    font-size: 11px;
 }

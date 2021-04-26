@@ -256,4 +256,89 @@
   })
   ```
 
+
+
+### recommend
+
+- html 구조
+
+  ```html
+  <ul>
+  	<li>
+             <div class="recomm_img">
+               <img src="img/recom_04.jpg" alt="04">
+             </div>
+             <div class="recomm_name">
+             	 제품이름
+             </div>
+             <div class="buy_view_layer">
+               <a href="#" class="btn_view">자세히보기</a>
+             </div>
+       </li>
+  </ul>
+  ```
+
+- css
+
+  리스트가 전부 보이면 안되니까 none처리후 act가 붙으면 flex;
+
+  ```css
+  .recomm_list{
+      display:none;
+  }
+  .recomm_list.Act{
+      display:flex;
+  }
+  ```
+
+  가려진 view가 hover되면 보이게
+
+  ```css
+  .buy_view_layer{
+    position:absolute;
+    width:100%;
+    height:100%;
+    left:0;
+    top:0;
+    background:rgba(242,242,242,0.5);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    opacity:0;
+    transition:all 0.2s;
+    cursor: pointer;
+  }
+  .recomm_list li:hover .buy_view_layer{
+    opacity:1;
+  }
+  ```
+
+- js
+
+  탭을 클릭하면 on되고 act
+
+  ```javascript
+  $(function(){
   
+      const btn_tab = $('.recomm_tab a.btn_tab');
+      const recomm_list = $('.recomm_list');
+  
+      btn_tab.click(recomm);
+  
+      function recomm(e){
+          e.preventDefault();
+  
+          const idx = $(this).index();
+          console.log(idx)
+  
+          btn_tab.removeClass('On');
+          $(this).addClass('On');
+  
+          recomm_list.removeClass('Act');
+          recomm_list.eq(idx).addClass('Act');
+      }
+  })
+  ```
+
+  
+

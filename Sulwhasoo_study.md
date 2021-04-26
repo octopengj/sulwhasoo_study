@@ -396,5 +396,113 @@
   }
   ```
 
+
+
+### flag
+
+- html
+
+  ```html
+   <div class="flagship">
+        <h2 class="cont_title">
+          설화수 플래그십 스토어 & 스파
+        </h2>
+        <div class="flag_wrap">
+          <ul class="flag_slider">
+            <li class="fl_01">slider</li>
+            <li class="fl_02">slider</li>
+            <li class="fl_03">slider</li>
+            <li class="fl_04">slider</li>
+          </ul>
+          <ul class="flag_btm_wrap">
+            <li><a href="#">0</a></li>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+          </ul>
+          <div class="flag_txt_wrap">
+            <p>
+              등불이 어둠을 밝혀 길을 안내하 듯, <br>
+              아시아의 지혜를 담아 아름다움을 비추는<br>
+              설화수 플래그십 스토어와 스파를 <br>
+              방문해보세요.
+            </p>
+            <a href="#" class="btn_view">
+              자세히보기
+            </a>
+          </div>
+          <a href="#" class="flagside left">left</a>
+          <a href="#" class="flagside right">right</a>
+   </div>
+  ```
+
+- js
+
+  ```javascript
+  $(function(){
+      const fl_slider = $('.flag_slider li');
+      const fl_btm_List =$('.flag_btm_wrap li');
+      const fl_left_btn= $('.flagside.left');
+      const fl_right_btn= $('.flagside.right');
+  
+      first();
+  
+      function first(){
+          fl_slider.eq(0).addClass('On');
+          fl_btm_List.eq(0).addClass('Act');
+      }
+      
+      fl_right_btn.click(right_Event);
+      fl_left_btn.click(left_Event);
+      fl_btm_List.click(fl_btm_Event)
+      
+      function fl_btm_Event(e){
+          e.preventDefault();
+  
+          const idx = $(this).index();
+          reset();
+          fl_slider.eq(idx).addClass('On');
+          fl_btm_List.eq(idx).addClass('Act');
+      }
+  
+      function left_Event(e){
+          e.preventDefault();
+          let idx = $('.flag_slider li.On').index();
+          reset();
+      
+          if(idx>0){
+              fl_slider.eq(idx-1).addClass('On');
+              fl_btm_List.eq(idx-1).addClass('Act');
+          }
+          if(idx==0){
+              idx=3;
+              fl_slider.eq(idx).addClass('On');
+              fl_btm_List.eq(idx).addClass('Act');
+          }
+      }
+  
+      function right_Event(e){
+          e.preventDefault();
+          let idx = $('.flag_slider li.On').index();
+          reset();
+      
+          if(idx<3){
+              fl_slider.eq(idx+1).addClass('On');
+              fl_btm_List.eq(idx+1).addClass('Act'); 
+          }
+          if(idx==3){
+              idx=0;
+              fl_slider.eq(idx).addClass('On');
+              fl_btm_List.eq(idx).addClass('Act');
+          }   
+      }
+  
+      function reset(){
+          fl_slider.removeClass('On');
+          fl_btm_List.removeClass('Act');
+      }
+  })
+  ```
+
   
 

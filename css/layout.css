@@ -513,3 +513,95 @@ h2.cont_title{
 .lounge.lou02 .lounge_img{
     order:2;
 }
+
+/* flagship */
+.flagship{
+    margin:120px 0 112px;
+}
+.flag_wrap{
+    height:400px;
+    position: relative;
+}
+.flag_slider{
+    height:100%;
+    z-index:0;
+    position: relative;
+}
+.flag_slider li{
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center top;
+    text-indent:-9999px;
+    opacity:0;
+}
+.flag_slider li.On{
+    opacity:1; 
+}
+.flag_slider li.fl_01{
+    background-image: url(/img/flag-bg-pc-01.jpg);
+}
+.flag_slider li.fl_02{
+    background-image: url(/img/flag-bg-pc-02.jpg);
+}
+.flag_slider li.fl_03{
+    background-image: url(/img/flag-bg-pc-03.jpg);
+}
+.flag_slider li.fl_04{
+    background-image: url(/img/flag-bg-pc-04.jpg);
+}
+.flag_txt_wrap{
+    position:absolute;
+    top:0;
+    height:100%;
+    left:950px;
+    width:364px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-flow:column;
+}
+.flag_txt_wrap p{
+    color: #545454;
+    font-size: 18px;
+    line-height: 30px;
+}
+.flag_btm_wrap{
+    margin-top:30px;
+    text-align: center;
+}
+.flag_btm_wrap li{
+    display:inline-block;
+}
+.flag_btm_wrap li a{
+    display:block;
+    width:10px;
+    height:10px;
+    border-radius: 50%;
+    background:#e7e7e7;
+    text-indent:-9999px;
+}
+.flag_btm_wrap li.Act a{
+    background:#4f4f4f;
+}
+.flagside{
+    position:absolute;
+    width:45px;
+    height:80px;
+    top:calc(50% - 40px);
+    text-indent: -9999px;
+    background-position: left top;
+    background-repeat: no-repeat;
+}
+.flagside.left{
+    left:0;
+    background-image:url(/img/flag-arr-prev.png);
+}
+.flagside.right{
+    right:0;
+    background-image:url(/img/flag-arr-next.png);
+}

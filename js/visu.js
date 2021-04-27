@@ -73,7 +73,8 @@ $(function () {
     }
 
     function right(e) {
-        e.preventDefault()
+        e.preventDefault();
+        // e.stopPropagation();
         const idx = $('.visual_wrap>li.On').index()
 
         reset();

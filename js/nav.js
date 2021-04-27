@@ -10,6 +10,46 @@ $(function(){
     const gnb_menu_list = $('.nav_d1>a');//selector
     const sub_menu =$('.gnb_menu>li>ul');//On
     
+    // mob_nav
+    const mob_nav_btn = $('.mob_nav_btn');
+    const mob_nav = $('.mob_nav ');
+    const m_nav_bg = $('.m_nav_bg');
+    const mob_btn =$('.m_nav_list_tit');
+    const m_sub_menu =$('.m_nav_list li>dl');
+
+    const main = $('#main')
+
+
+    mob_nav_btn.click(function(){
+        mob_nav.addClass('left_move');
+        m_nav_bg.delay(500).fadeIn();
+    })
+    
+    m_nav_bg.click(function(){
+        mob_nav.removeClass('left_move');
+        m_nav_bg.fadeOut(0);
+    })
+
+
+    mob_btn.click(function(){
+        const str = $(this).attr('class');
+        const idx = $('.m_nav_list_tit.On');
+        console.log(str);
+
+        idx.next(m_sub_menu).slideToggle()
+        idx.toggleClass('On');
+
+        if(str=="m_nav_list_tit On"){
+
+        }
+        else{
+            $(this).toggleClass('On');
+            $(this).next(m_sub_menu).slideToggle();
+        }
+
+    })
+
+
     gnb_menu_list.on('mouseenter',function(){
         if($(this).parent('li').index()==0){
             

@@ -1,10 +1,12 @@
 @charset "utf-8";
+.mob_nav {
+    display: none;
+}
+.mob_nav_btn{
+    display: none;
+}
 #main {
-    background-color: #ccc;
-    z-index: 0;
-    position: relative;
-    width:100vw;
-    height:calc(100vh - 108px);
+    filter: blur(0px);
 }
 .header {
     position: relative;
@@ -538,6 +540,7 @@ h2.cont_title{
     background-position: center top;
     text-indent:-9999px;
     opacity:0;
+    background-size: cover;
 }
 .flag_slider li.On{
     opacity:1; 
